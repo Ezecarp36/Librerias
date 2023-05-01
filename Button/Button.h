@@ -7,7 +7,7 @@ class Button
 private:
     int pin;
     bool flank = HIGH;
-    bool previousState = !flanco;
+    bool previousState = !flank;
 
 public:
     Button(int p);

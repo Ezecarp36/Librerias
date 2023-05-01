@@ -1,21 +1,20 @@
-#include "Tatami.h"
+#include "AnalogSensor.h"
 
-Tatami::Tatami(int p)
+AnalogSensor::AnalogSensor(int p)
 {
     pin = p;
     pinMode(pin, INPUT);
 }
 
-float Tatami::SensorRead()
+float AnalogSensor::SensorRead()
 {
     long sum = 0;
     for (int i = 0; i < n; i++)
     {
         sum = sum + analogRead(pin);
     }
-    float read = suma / n;
+    float read = sum / n;
     read = read * 1000 / 1024.0;
 
     return (read);
 }
-
